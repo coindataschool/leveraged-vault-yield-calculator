@@ -17,8 +17,8 @@ with c2:
     stETH_yield = st.number_input('stETH Yield (APR, %)', min_value=1, value=10)
     swap_fees = st.number_input('Balancer wstETH/WETH Pool Swap Fees (APR, %)', min_value=0.1, value=0.5)
     bal_rewards = st.number_input('Bal Incentives (APR, %)', min_value=0, value=5)
-    lido_rewards = st.number_input('Lido Incentives (APR, %)', min_value=0, value=0.5)
-    aura_rewards = st.number_input('Aura Incentives (APR, %)', min_value=0, value=12.5) 
+    lido_rewards = st.number_input('Lido Incentives (APR, %)', min_value=0, value=0.5, step=0.1)
+    aura_rewards = st.number_input('Aura Incentives (APR, %)', min_value=0, value=12.5, step=0.1) 
     
 # calculate effective yield
 borrow = capital * borrow_mult
