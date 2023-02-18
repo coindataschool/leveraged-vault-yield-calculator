@@ -31,4 +31,4 @@ effective_yield = (earnings / capital) / dur * 12
 # display
 st.header("Your Expected Yield (APR):")
 st.title('{:.2%}'.format(effective_yield))
-
+st.text('assuming no compounding')
