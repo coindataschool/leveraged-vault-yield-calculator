@@ -25,8 +25,8 @@ borrow = capital * borrow_mult
 deposit = capital + borrow
 monthly_rate_get = (stETH_yield+swap_fees+bal_rewards+lido_rewards+aura_rewards)/100/12
 monthly_rate_pay = rate_pay/100/12
-earnings = deposit * (1 + monthly_rate_get*dur) - borrow * (1 + monthly_rate_pay*dur)
-effective_yield = (earnings / capital - 1) / dur * 12
+earnings = deposit * monthly_rate_get * dur - borrow * monthly_rate_pay * dur # assume no compounding
+effective_yield = (earnings / capital) / dur * 12
 
 # display
 st.header("Your Expected Yield (APR):")
